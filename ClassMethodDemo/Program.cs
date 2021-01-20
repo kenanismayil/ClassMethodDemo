@@ -24,7 +24,13 @@ namespace ClassMethodDemo
             client3.Id = 994689949;
             client3.Balance = 450;
 
-            Client[] clients = new Client[] { client1, client2, client3 };
+            Client client4 = new Client();
+            client4.Name = "Sila";
+            client4.Surname = "Gunel";
+            client4.Id = 994561312;
+            client4.Balance = 450;
+
+            Client[] clients = new Client[] { client1, client2, client3,client4 };
 
             Console.WriteLine("Clients List:");
             Console.WriteLine("-----------------------");
@@ -40,8 +46,10 @@ namespace ClassMethodDemo
             }
 
             ClientManager operation = new ClientManager();
-            operation.ClientAdd("Mustafa Balkan");
-            operation.ClientAdd("Arif Ozkaya");
+            operation.ClientAdd("Kenan Ismayil");
+            operation.ClientAdd("Engin Demirog");
+            operation.ClientAdd("Berkay Bilgin");           
+            operation.ClientAdd("Sila Gunel");
 
             Console.WriteLine("-----------------------");
 
@@ -49,12 +57,14 @@ namespace ClassMethodDemo
             operation.ClientList(client1);
             operation.ClientList(client2);
             operation.ClientList(client3);
+            operation.ClientList(client4);
 
             Console.WriteLine("----------------------");
 
             operation.ClientDelete(client1);
             operation.ClientDelete(client2);
             operation.ClientDelete(client3);
+            operation.ClientDelete(client4);
 
             Console.WriteLine("----------------------");
 

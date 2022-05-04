@@ -13,9 +13,13 @@ namespace ClassMethodDemo
             Console.WriteLine($"{customer.Name} {customer.Surname} Bankaya Eklendi.");
         }
 
-        public void CustomerList(Customer customer)
+        public void CustomerList(params Customer[] customer)
         {
-            Console.WriteLine(customer.Name + " " + customer.Surname);
+            foreach (var item in customer)
+            {
+                Console.WriteLine(item.Name + " " + item.Surname);
+            }
+
         }
 
         public void Delete(Customer customer)

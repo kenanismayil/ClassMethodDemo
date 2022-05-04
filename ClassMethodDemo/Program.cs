@@ -66,10 +66,8 @@ namespace ClassMethodDemo
             //Musterilerin Listelenmesi
             Console.WriteLine("Musterilerin Listelenmesi:");
             Console.WriteLine("**************************************************");
-            foreach (var item in customers)
-            {
-                customerManager.CustomerList(item);
-            }
+            customerManager.CustomerList(customer1,customer2,customer3);     //Istedigim kadar parametre gonderebilirim. Cunki params keyword'u ile esneklestirdim.
+
 
             Console.WriteLine("--------------------------------------------------");
 
